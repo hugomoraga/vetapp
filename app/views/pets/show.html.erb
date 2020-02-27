@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <strong>Race:</strong>
+  <%= @pet.race %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @pet.birthday %>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>weight</th>
+<th>height</th>
+<th>avg_weight</th>
+<th>avg_height</th>
+<th>max_weight</th>
+<th>max_height</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><%= @pet.pet_weight %>
+<td><%= @pet.pet_height %>
+<td><%= @pet.avg_weight %>
+<td><%= @pet.avg_height %>
+<td><%= @pet.max_weight %>
+<td><%= @pet.max_height %>
+
+</tr>
+
+<br>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
