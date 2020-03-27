@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 2020_02_11_182840) do
     t.string "birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "pet_id"
-    t.index ["pet_id"], name: "index_pets_on_pet_id"
+    t.integer "client_id"
+    t.index ["client_id"], name: "index_pets_on_client_id"
   end
 
 end

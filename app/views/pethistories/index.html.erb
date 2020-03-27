@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pethistories</h1>
+<div class="container">
+ <div class="row">
+    <div class="col-12">
+        <div class="card mb-3">
+<h1 class="text-center">Historial Pet</h1>
+        <div class="card-body pb-3">
+<%= link_to 'Nueva Historia', new_pethistory_path, class:'btn btn-primary' %>
 
-<table>
+        <table class="table">
   <thead>
     <tr>
-      <th>Weight</th>
-      <th>Height</th>
-      <th>Description</th>
-      <th>Pet</th>
+      <th scope="col">Weight</th>
+      <th scope="col">Height</th>
+      <th scope="col">Description</th>
+      <th scope="col">Pet</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,15 +25,18 @@
         <td><%= pethistory.weight %></td>
         <td><%= pethistory.height %></td>
         <td><%= pethistory.description %></td>
-        <td><%= pethistory.pet.name %></td>
-        <td><%= link_to 'Show', pethistory %></td>
-        <td><%= link_to 'Edit', edit_pethistory_path(pethistory) %></td>
-        <td><%= link_to 'Destroy', pethistory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= pethistory.pet_id %></td>
+        <td><%= link_to 'Show', pethistory, class:'btn btn-primary' %>
+        <%= link_to 'Edit', edit_pethistory_path(pethistory), class:'btn btn-primary' %>
+        <%= link_to 'Destroy', pethistory, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-primary' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+    
 
-<br>
-
-<%= link_to 'New Pethistory', new_pethistory_path %>
+</div>
+</div>
+</div>
+</div>
+</div>
